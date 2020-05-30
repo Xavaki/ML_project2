@@ -1,0 +1,58 @@
+- training should always be better than with test part bc we are fitting the coefficients
+  --> minimizing th error
+
+- parameters conclusion: Not overfitting BUT
+- everything is classified as non customer -> no classification in the SVM! bc they don't differenciate
+- classifier s not classifying
+- seems that prediction performans for 1 is great but it is misleading! 
+- range of precision and recall to large -> recall very low 2/319
+--> less error -> high accuracy but a lot of error bc of unbalanced dataset
+-> only analysing accuracy can be hugely misleading
+not good bc we only do one split 
+
+DT: 
+- more equalized -> not everything as customer actually classification
+- but still not good because customers are not classified correctely 
+- higher recall -> more 1s correctly classified
+- precision quite low 
+- trade-off: worse accuracy but at least "real" classification 
+better than SVM because we can capture more clusters, devide space into superspaces! 
+ -> can do more splits in the dataspace
+
+NB:
+- following generatic approach 
+- NB similar with decisiion tree (DT better)
+
+Hist: 
+- probability of being 1 for real customers probabilites of predictio
+
+KFOLD
+- accuracy doesn't mean that the model works propably!!! eg bc of unbalanced data set 
+- accuracy says nothing about how good the model is classifying 
+
+SAMPELING
+- sample non customers
+- are doing much better in sampeling but worse accuracy 
+- have improved the classifyer 
+- better values in recall!!!!!! better clasification 
+
+-> if distinguishin in hist with overlapping can be done the classification is proper
+- default threshold 50% 
+- define cutoff by trial and error 
+- get best values for prediction and recall 
+-> trade off between precision and recall 
+
+- Voting not much better
+
+Random Forest: model has improved a lot!!! not perfect but much better 
+
+With same data bt with different tecniques we can improve the model 
+
+--> CHOSE CUTOFF
+- which is the best cutoff 
+- Want to predict new customers that can by product
+-> want to have a classifier that is very good in clasifying the customers! 
+-> then select non customers that are predicted as customer as target for our campaigne
+
+we need a good precision without losing the recall -> trade off 
+
